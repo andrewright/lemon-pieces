@@ -1,0 +1,40 @@
+{
+	"titles": {
+		"id": "Treaty Id",
+		"companyName": "Company name",
+		"effectiveness": "Effectiveness",
+		"treaty": "Treaty",
+		"dataStatus": "Active"
+
+	},
+	"data": [
+		{
+			"id": "G405060IL-14 v1.0",
+			"companyName": "Crown Live Insurance",
+			"effectiveness": "14/05/2014",
+			"treaty": "Assumed",
+			"dataStatus": "Active"
+		},
+		{
+			"id": "T4589IL-14 v1.0",
+			"companyName": "H&S",
+			"effectiveness": "14/05/2014",
+			"treaty": "Assumed",
+			"dataStatus": "Active"
+		},
+		{
+			"id": "ZS9384IL-14 v1.0",
+			"companyName": "Very",
+			"effectiveness": "14/05/2014",
+			"treaty": "Assumed",
+			"dataStatus": "Active"
+		},
+		{
+			"id": "X9545060IL-14 v1.0",
+			"companyName": "MC Donalds",
+			"effectiveness": "14/05/2014",
+			"treaty": "Aassumed",
+			"dataStatus": "Active"
+		}
+	]
+}

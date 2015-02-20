@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/formGen.js"></script>
+	<style>
+		.holder label {
+			display: block;
+			margin-bottom: 4px;
+			cursor: pointer;
+			max-width: 300px;
+		}
+
+		.holder label:hover {
+			background: #f9f9f9;
+		}
+
+		.holder label span {
+			display: inline-block;
+			width: 100px;
+		}
+	</style>
+</head>
+<body ng-app="formsGenerator">
+
+<form class="holder" ng-controller="getData">
+	<content ng-repeat="person in data.people" data="person" genders="data.genderValue"></content>
+	{{data.people}}}
+	</select>
+</form>
+
+<div>
+	<h1>New part of app</h1>
+	<ul>
+		<li><a href="#/page/first">Page 1</a></li>
+		<li><a href="#/page/second">Page 2</a></li>
+		<li><a href="#/page/third">Page 3</a></li>
+	</ul>
+	<div class="loadedContent" ng-view></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<div class="Popup">
+	<header class="modal-header">
+		<h3 class="modal-title">{{hTitle}}</h3>
+	</header>
+
+	<section class="modal-body">
+		<div class="form-row">
+			<label class="holder">
+				<span>Treaty ID</span>
+				<input type="text" class="form-control" ng-model="newTreatyID" id="exampleInputEmail1" placeholder="Company Name">
+			</label>
+
+			<label class="holder">
+				<span>Company name</span>
+				<select class="form-control" ng-model="newCompanyName" ng-options="opt for opt in config.firstSelectOpt"></select>
+			</label>
+
+			<div class="holder">
+				<label>
+					<input type="radio" name="activity" value="active">
+					<span>Active</span>
+				</label>
+				<label>
+					<input type="radio" name="activity" value="block">
+					<span>Block</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="holder">
+				<span>Effectiveness</span>
+				<div class="col-md-6">
+					<date-widget date-format="yyyy/MM/dd" ng-model="newEffectiveness"></date-widget>
+				</div>
+			</div>
+
+			<label>
+				<span>Treaty</span>
+				<select class="form-control" ng-model="newTreaty" ng-options="opt for opt in config.secondSelectOpt"></select>
+			</label>
+		</div>
+		<div class="clearfix"></div>
+	</section>
+
+	<footer class="modal-footer">
+		<button class="btn btn-primary" ng-click="ok()">OK</button>
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	</footer>
+</div>

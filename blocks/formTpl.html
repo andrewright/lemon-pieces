@@ -1,0 +1,16 @@
+<label>
+	<span>{{data.name}}</span>
+	<number-input ng-model="data.age"></number-input>
+	<span>{{data.gender}}</span>
+	<select ng-model="data.gender" ng-options="gender.key as gender.value for gender in genders"></select>
+	{{gender}}
+
+	<!--<select ng-model="data.gender">
+		<option ng-repeat="gender in genders"
+				ng-selected="gender.key == data.gender"
+				value="{{gender.key}}">
+			{{gender.value}}
+		</option>
+	</select>-->
+
+</label>

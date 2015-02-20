@@ -1,0 +1,91 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css";
+/* line 6, ../style.scss */
+.Popup .form-row {
+  width: 50%;
+  float: left;
+}
+/* line 10, ../style.scss */
+.Popup .form-row:first-child {
+  padding-right: 10px;
+}
+/* line 14, ../style.scss */
+.Popup .form-row > span {
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+}
+/* line 20, ../style.scss */
+.Popup .form-row .holder {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+/* line 24, ../style.scss */
+.Popup .form-row .holder .col-md-6 {
+  padding: 0;
+  float: none;
+  width: auto;
+}
+/* line 31, ../style.scss */
+.Popup .form-row label {
+  display: block;
+}
+/* line 35, ../style.scss */
+.Popup .form-row .input-group {
+  margin: 0;
+}
+
+/* line 41, ../style.scss */
+.container {
+  width: 1000px;
+}
+/* line 45, ../style.scss */
+.container table.table thead {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;
+}
+/* line 56, ../style.scss */
+.container table.table tbody tr.selected td {
+  background: #d7fad6;
+}
+/* line 61, ../style.scss */
+.container table.table td {
+  max-width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 69, ../style.scss */
+.container footer .my-pagination {
+  float: right;
+  margin: 0 10px 0 0;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;
+  /*FIXME add compass mixin http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select */
+}
+/* line 83, ../style.scss */
+.container footer .form-control {
+  width: 100px;
+  margin-right: 20px;
+  float: right;
+}
+/* line 88, ../style.scss */
+.container footer .popup-open, .container footer .treaty-delete {
+  float: left;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css";
+
+.Popup {
+	.modal-body {
+	}
+	.form-row {
+		width: 50%;
+		float: left;
+
+		&:first-child {
+			padding-right: 10px;
+		}
+
+		> span {
+			display: block;
+			font-weight: bold;
+			overflow: hidden;
+		}
+
+		.holder {
+			font-weight: 700;
+			margin-bottom: 10px;
+
+			.col-md-6 {
+				padding: 0;
+				float: none;
+				width: auto;
+			}
+		}
+
+		label {
+			display: block;
+		}
+
+		.input-group {
+			margin: 0;
+		}
+	}
+}
+
+.container {
+	width: 1000px;
+
+	table.table {
+		thead {
+			-webkit-user-select: none; /* Chrome all / Safari all */
+			-moz-user-select: none; /* Firefox all */
+			-ms-user-select: none; /* IE 10+ */
+
+			/* No support for these yet, use at own risk */
+			-o-user-select: none;
+			user-select: none;
+		}
+
+		tbody {
+			tr.selected td {
+				background: #d7fad6;
+			}
+		}
+
+		td {
+			max-width: 10em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	footer {
+		.my-pagination {
+			float: right;
+			margin: 0 10px 0 0;
+
+			-webkit-user-select: none; /* Chrome all / Safari all */
+			-moz-user-select: none; /* Firefox all */
+			-ms-user-select: none; /* IE 10+ */
+
+			/* No support for these yet, use at own risk */
+			-o-user-select: none;
+			user-select: none;
+
+			/*FIXME add compass mixin http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select */
+		}
+		.form-control {
+			width: 100px;
+			margin-right: 20px;
+			float: right;
+		}
+		.popup-open, .treaty-delete {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+}

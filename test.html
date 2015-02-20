@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Angular test</title>
+	<script src="js/lib/angular.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<script src="js/lib/jquery-1.11.2.min.js"></script>
+
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/ui-bootstrap-0.12.0.min.js"></script>
+	<script src="js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
+
+	<script src="js/test.js"></script>
+</head>
+<body>
+	<!--Search:
+	<input ng-model="query">
+	<select ng-model="orderProp">
+		<option value="id">id</option>
+		<option value="treaty">treaty</option>
+	</select>
+
+	<ul ng-controller="dataCtrl">
+		<li ng-repeat="item in items.data | filter:query | orderBy:orderProp | startFrom:(1-1)*1 | limitTo:1">
+			<p>{{item.id}}</p>
+			<p>{{item.companyName}}</p>
+			<p>{{item.treaty}}</p>
+		</li>
+	</ul>-->
+	<div ng-app="helloHabrahabr">
+		<div ng-controller="forExampleController">
+			<input ng-model="word">
+			<span habra-habr="word" habra="Nehabra"></span>
+		</div>
+	</div>
+</body>
+</html>
