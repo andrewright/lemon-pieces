@@ -2,7 +2,9 @@ var swissReApp = angular.module('swissReApp', ['ui.bootstrap', 'ngRoute']);
 
 swissReApp.controller('swissReData', ['$scope', '$http', function ($scope, $http) {
 	$scope.items = {};
+
 	$http.get('js/base.json').success(function (data) {
+		//$scope.data = data;
 		$scope.items = data;
 	});
 
@@ -88,23 +90,20 @@ swissReApp.filter('startFrom', function () {
 	}
 });
 
-swissReApp.directive('numberInput', function () {
-	return {
-		restrict: 'E',
-		template: '<input type="text"/>',
-		replace: true,
-		require: 'ngModel',
-
-		link: function ($scope, element, attrs, modelCtrl) {
-			modelCtrl.$parsers.push(function (inputValue) {
-				if (inputValue == undefined) return '';
-				var transformedInput = inputValue.replace('/[^0-9]/g', '');
-				if (transformedInput != inputValue) {
-					modelCtrl.$setViewValue(transformedInput);
-					modelCtrl.$render();
-				}
-				return transformedInput;
-			})
-		}
-	}
+swissReApp.config(function ($routeProvider) {
+	$routeProvider
+		.when('/pages/swissRe', {templateUrl: 'view/pages/swissRe.html'})
+		.when('/pages/formGen', {
+			templateUrl: 'view/pages/formGen.html',
+			controller: 'getData'
+		})
+		.when('/pages/testS', {templateUrl: 'view/pages/testS.html'})
+		/*.when('/pages/third/:pageNumber', {
+		 controller: 'newPage',
+		 *//*templateUrl: 'blocks/testContentView2.html'*//*
+	 templateUrl: 'view/blocks/testContentView2.html'
+	 })*/
+		.otherwise({
+			redirectTo: '/pages/swissRe'
+		});
 });

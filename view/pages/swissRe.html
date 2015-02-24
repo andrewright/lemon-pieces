@@ -1,0 +1,59 @@
+<div class="wrapper">
+	<div class="bs-example" data-example-id="hoverable-table">
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th></th>
+				<th>
+					<a href="#" ng-click="orderProp = 'id'; reverse=!reverse">{{titles.id}}</a>
+				</th>
+				<th>
+					<a href="#" ng-click="orderProp = 'companyName'; reverse=!reverse">{{titles.companyName}}</a>
+				</th>
+				<th>
+					<a href="#" ng-click="orderProp = 'effectiveness'; reverse=!reverse">{{titles.effectiveness}}</a>
+				</th>
+				<th>
+					<a href="#" ng-click="orderProp = 'treaty'; reverse=!reverse">{{titles.treaty}}</a>
+				</th>
+				<th>
+					<a href="#" ng-click="orderProp = 'dataStatus'; reverse=!reverse">{{titles.dataStatus}}</a>
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="item in items | orderBy:orderProp:reverse | startFrom:config">
+				<td scope="row">
+					<input type="checkbox" ng-click="select(item.id)">
+				</td>
+				<td>{{item.id}}</td>
+				<td>{{item.companyName}}</td>
+				<td>{{item.effectiveness}}</td>
+				<td>{{item.treaty}}</td>
+				<td>{{item.dataStatus}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<footer>
+		<button ng-controller="CallPopup" class="btn btn-default popup-open" ng-click="open('lg', 'Treaty')">Create Treaty</button>
+
+		<button class="btn btn-danger treaty-delete" ng-click="deleteRow()" disabled>Delete ({{selectCounter}})</button>
+
+		<pagination class="my-pagination"
+					total-items="config.numElements"
+					items-per-page="config.numPerPage"
+					ng-model="config.currentPage"
+					ng-change="pageChanged()"></pagination>
+
+		<number-input ng-model="myNumber"></number-input>
+		<number-input ng-model="myNumber2"></number-input>
+
+		<span>{{myNumber}}</span>
+		<span>{{myNumber2}}</span>
+		<select class="form-control" ng-model="config.numPerPage" ng-options="opt for opt in config.perPageFilter"></select>
+	</footer>
+
+	{{data}}
+</div>

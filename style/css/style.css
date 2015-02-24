@@ -35,10 +35,32 @@
 }
 
 /* line 41, ../style.scss */
-.container {
+.wrapper {
   width: 1000px;
+  margin: 0 auto;
 }
-/* line 45, ../style.scss */
+
+/* line 46, ../style.scss */
+.container {
+  width: auto;
+}
+/* line 49, ../style.scss */
+.container .holder label {
+  display: block;
+  margin-bottom: 4px;
+  cursor: pointer;
+  max-width: 300px;
+}
+/* line 55, ../style.scss */
+.container .holder label:hover {
+  background: #f9f9f9;
+}
+/* line 58, ../style.scss */
+.container .holder label span {
+  display: inline-block;
+  width: 100px;
+}
+/* line 65, ../style.scss */
 .container table.table thead {
   -webkit-user-select: none;
   /* Chrome all / Safari all */
@@ -50,18 +72,18 @@
   -o-user-select: none;
   user-select: none;
 }
-/* line 56, ../style.scss */
+/* line 76, ../style.scss */
 .container table.table tbody tr.selected td {
   background: #d7fad6;
 }
-/* line 61, ../style.scss */
+/* line 81, ../style.scss */
 .container table.table td {
   max-width: 10em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 69, ../style.scss */
+/* line 89, ../style.scss */
 .container footer .my-pagination {
   float: right;
   margin: 0 10px 0 0;
@@ -76,16 +98,33 @@
   user-select: none;
   /*FIXME add compass mixin http://compass-style.org/reference/compass/css3/user_interface/#mixin-user-select */
 }
-/* line 83, ../style.scss */
+/* line 103, ../style.scss */
 .container footer .form-control {
   width: 100px;
   margin-right: 20px;
   float: right;
 }
-/* line 88, ../style.scss */
+/* line 108, ../style.scss */
 .container footer .popup-open, .container footer .treaty-delete {
   float: left;
   margin-right: 10px;
+}
+
+/* line 114, ../style.scss */
+.footer {
+  height: 150px;
+  padding-top: 50px;
+}
+/* line 118, ../style.scss */
+.footer .wrapper {
+  border-top: 1px solid #dddddd;
+  color: #dddddd;
+  transition: all .2s ease-in-out;
+}
+/* line 123, ../style.scss */
+.footer .wrapper:hover {
+  border-top-color: #bbbbbb;
+  color: #bbbbbb;
 }
 
 /*# sourceMappingURL=style.css.map */

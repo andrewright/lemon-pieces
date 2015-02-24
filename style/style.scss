@@ -38,8 +38,28 @@
 	}
 }
 
-.container {
+.wrapper {
 	width: 1000px;
+	margin: 0 auto;
+}
+
+.container {
+	width: auto;
+
+	.holder label {
+		display: block;
+		margin-bottom: 4px;
+		cursor: pointer;
+		max-width: 300px;
+
+		&:hover {
+			background: #f9f9f9;
+		}
+		span {
+			display: inline-block;
+			width: 100px;
+		}
+	}
 
 	table.table {
 		thead {
@@ -88,6 +108,21 @@
 		.popup-open, .treaty-delete {
 			float: left;
 			margin-right: 10px;
+		}
+	}
+}
+.footer {
+	height: 150px;
+	padding-top: 50px;
+
+	.wrapper {
+		border-top: 1px solid #dddddd;
+		color: #dddddd;
+		transition: all .2s ease-in-out;
+
+		&:hover {
+			border-top-color: #bbbbbb;
+			color: #bbbbbb;
 		}
 	}
 }

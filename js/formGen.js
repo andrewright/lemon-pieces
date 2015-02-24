@@ -1,23 +1,23 @@
-var testDirective = angular.module('formsGenerator', ['ngRoute']);
+/*formGet CODE*/
+/*swissReApp.controller('newPage', function ($scope, $routeParams) {
+ $scope.toto = "Rototo" + $routeParams.pageNumber;
+ console.log($scope.toto, $routeParams.pageNumber);
 
-testDirective.controller('newPage', function ($scope) {
-	$scope.toto = "Rototo";
-	console.log($scope.toto);
-});
+ });*/
 
-testDirective.config(function ($routeProvider) {
+swissReApp.config(function ($routeProvider) {
 	$routeProvider
-		.when('/page/first', {templateUrl: 'blocks/testContentView.html'})
+		.when('first', {templateUrl: 'blocks/testContentView.html'})
 		.when('/page/second', {templateUrl: 'blocks/testContentView2.html'})
-		.when('/page/third', {
-			controller: 'newPage',
-			templateUrl: 'blocks/testContentView2.html'
+		.when('/pages/formGen/third/:pageNumber', {
+			/*controller: 'newPage',*/
+			templateUrl: 'view/blocks/testContentView2.html'
 		})
 });
 
-
-testDirective.controller('getData', ['$scope', function ($scope) {
+swissReApp.controller('getData', ['$scope', function ($scope) {
 	$scope.data = {
+		treatyCount: 4,
 		people: [
 			{
 				name: 'Vasja',
@@ -41,10 +41,10 @@ testDirective.controller('getData', ['$scope', function ($scope) {
 		]
 	};
 }]);
-testDirective.directive('content', function () {
+swissReApp.directive('content', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'blocks/formTpl.html',
+		templateUrl: 'view/blocks/formTpl.html',
 		replace: true,
 
 		scope: {
@@ -53,7 +53,7 @@ testDirective.directive('content', function () {
 		}
 	}
 });
-testDirective.directive('numberInput', function () {
+swissReApp.directive('numberInput', function () {
 	return {
 		restrict: 'E',
 		template: '<input type="text"/>',
@@ -78,3 +78,4 @@ testDirective.directive('numberInput', function () {
 		}
 	}
 });
+/*formGet CODE*/

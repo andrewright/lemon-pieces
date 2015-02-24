@@ -1,7 +1,5 @@
-var mainModule = angular.module('helloHabrahabr', []);
-
-
-mainModule.directive('habraHabr', function () {
+/*testS CODE*/
+swissReApp.directive('habraHabr', function () {
 	return function ($scope, element, attrs) {
 		/*Задаем функцию, которая будет вызываться при изменении переменной word*/
 		$scope.$watch(attrs.habraHabr, function (value) {
@@ -10,18 +8,18 @@ mainModule.directive('habraHabr', function () {
 	}
 });
 
-mainModule.controller('forExampleController', ['$scope', function ($scope) {
+swissReApp.controller('forExampleController', ['$scope', function ($scope) {
 	$scope.word = "Habrahabra"
 }]);
 
 
-mainModule.directive('myNewDirct', function () {
+swissReApp.directive('myNewDirct', function () {
 	return {
 		link: function (scope, element, attrs) {
 
 		},
 		priority: 0,
-		terminal:false,
+		terminal: false,
 		template: '<div></div>',
 		templateUrl: 'template.html',
 		replace: false,
@@ -33,3 +31,4 @@ mainModule.directive('myNewDirct', function () {
 		}
 	}
 });
+/*testS CODE*/
