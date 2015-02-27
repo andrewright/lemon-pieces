@@ -5,15 +5,12 @@
 
  });*/
 
-swissReApp.config(function ($routeProvider) {
-	$routeProvider
-		.when('first', {templateUrl: 'blocks/testContentView.html'})
-		.when('/page/second', {templateUrl: 'blocks/testContentView2.html'})
-		.when('/pages/formGen/third/:pageNumber', {
-			/*controller: 'newPage',*/
-			templateUrl: 'view/blocks/testContentView2.html'
-		})
-});
+/*swissReApp.config(function ($state, $stateProvider, $routeProvider) {
+
+	$stateProvider.state('first', {
+		templateUrl: 'view/blocks/formTpl.html'
+	})
+});*/
 
 swissReApp.controller('getData', ['$scope', function ($scope) {
 	$scope.data = {

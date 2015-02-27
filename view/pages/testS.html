@@ -1,20 +1,26 @@
-<div class="wrapper" ng-controller="forExampleController">
-	<!--Search:
-		<input ng-model="query">
-		<select ng-model="orderProp">
-			<option value="id">id</option>
-			<option value="treaty">treaty</option>
-		</select>
+<div class="wrapper">
+	<fieldset class="eq">
+		<legend>Equalizer</legend>
 
-		<ul ng-controller="dataCtrl">
-			<li ng-repeat="item in items.data | filter:query | orderBy:orderProp | startFrom:(1-1)*1 | limitTo:1">
-				<p>{{item.id}}</p>
-				<p>{{item.companyName}}</p>
-				<p>{{item.treaty}}</p>
-			</li>
-		</ul>-->
-	<div>
-		<input ng-model="word" />
-		<span habra-habr="word" habra="Nehabra"></span>
-	</div>
+		<label orient='270deg' type='range' for="band" before="-5" after="5">0</label>
+
+		<input orient='270deg' type='range' min='0' value='2' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='2' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='2' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='4' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='3' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='3' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='6' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='7' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='7' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='8' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='8' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='6' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='5' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='6' max='9' step='1' />
+		<input orient='270deg' type='range' min='0' value='6' max='9' step='1' />
+
+		<label orient='90deg' type='range' for="band" before="5" after="-5">0</label>
+
+	</fieldset>
 </div>

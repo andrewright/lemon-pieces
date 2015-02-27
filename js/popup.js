@@ -3,7 +3,7 @@ swissReApp.controller('CallPopup', function ($scope, $modal, $log) {
 
 	$scope.open = function (size) {
 		var modalInstance = $modal.open({
-			templateUrl: 'blocks/popup.html',
+			templateUrl: 'view/blocks/popup.html',
 			controller: 'PopupCtrl',
 			size: size
 		});
@@ -24,7 +24,7 @@ swissReApp.controller('CallPopup', function ($scope, $modal, $log) {
 swissReApp.directive('dateWidget', function () {
 	return {
 		restrict: 'E',
-		templateUrl: 'blocks/dateWidget.html',
+		templateUrl: 'view/blocks/dateWidget.html',
 		replace: true,
 		require: 'ngModel',
 
@@ -79,6 +79,7 @@ swissReApp.controller('PopupCtrl', function ($scope, $modalInstance) {
 	};
 
 	$scope.ok = function () {
+
 		if ($scope == $scope.newTreatyID) {
 
 		}
